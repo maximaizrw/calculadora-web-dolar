@@ -6,7 +6,7 @@ export function calculateMpPrice(precioJuego, dolar) {
   }
 
   let precioJuegoPesos = precioJuego * dolar;
-  let ganancia = precioJuego < 30 ? precioJuegoPesos * GANANCIA : precioJuegoPesos * 0.15;
+  let ganancia = precioJuego < 30 ? precioJuegoPesos * GANANCIA : precioJuegoPesos * 0.10;
   
   let precioVenta = precioJuegoPesos + ganancia;
   precioVenta += precioVenta * CARGO_VENTA_MP;
