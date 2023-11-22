@@ -6,7 +6,7 @@ export function calculateMlPrice(precioJuego, dolar) {
   if (precioJuego < 30) {
     var ganancia = (precioJuegoPesos * GANANCIA);
   } else {
-    var ganancia = (precioJuegoPesos * 0.15);
+    var ganancia = (precioJuegoPesos * 0.10);
   }
   
   var precioVenta = precioJuegoPesos + ganancia;
