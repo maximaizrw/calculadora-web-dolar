@@ -2,7 +2,7 @@ import { CARGO_VENTA_ML, COSTO_FIJO, GANANCIA } from "@/pages/api/constants";
 
 
 export function calculateMlPrice(precioJuego, dolar) {
-  var precioJuegoPesos = precioJuego * 948;
+  var precioJuegoPesos = precioJuego * dolar;
   if (precioJuego < 30) {
     var ganancia = (precioJuegoPesos * GANANCIA);
   } else {
