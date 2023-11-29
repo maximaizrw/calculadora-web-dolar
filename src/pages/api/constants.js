@@ -10,7 +10,7 @@ export const CARGO_VENTA_MP = 0.08;
 export const COSTO_FIJO = 400;
 
 //Ganancia
-export const GANANCIA = 0.10;
+export const GANANCIA = 0.15;
 
 
 
