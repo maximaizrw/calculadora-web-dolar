@@ -7,7 +7,7 @@ export const TOTAL = PERCEPCION_GANANCIAS + LEY_IMPUESTO_PAIS + PERCEPCION_BIENE
 //Costos MERCADELIBRE
 export const CARGO_VENTA_ML = 0.13;
 export const CARGO_VENTA_MP = 0.08;
-export const COSTO_FIJO = 600;
+export const COSTO_FIJO = 700;
 
 //Ganancia
 export const GANANCIA = 0.10;
