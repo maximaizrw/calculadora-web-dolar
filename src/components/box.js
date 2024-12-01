@@ -2,18 +2,15 @@ import React, { useState } from "react";
 import {
   calculateMpPrice} from "@/utils/calculateMpPrice";
 import { calculateTransferPrice } from "@/utils/calculateTransferPrice";
-import { calculateMlPrice } from "@/utils/calculateMlPrice.1";
 
 function Box({ dolar }) {
   const [precioJuego, setprecioJuego] = useState("");
-  const [mlPrice, setMlPrice] = useState("");
   const [mpPrice, setMpPrice] = useState("");
   const [transferPrice, setTransferPrice] = useState("");
 
   const handleprecioJuegoChange = (event) => {
     const precioJuego = event.target.value;
     setprecioJuego(precioJuego);
-    setMlPrice(calculateMlPrice(precioJuego, dolar));
     setMpPrice(calculateMpPrice(precioJuego, dolar));
     setTransferPrice(calculateTransferPrice(precioJuego, dolar));
   };
@@ -30,15 +27,6 @@ function Box({ dolar }) {
         />
       </div>
       <div class="flex border-b-2 border-[#363062] items-center gap-x-2">
-        <div class="flex flex-col pr-2 border-r-2 border-[#363062] items-center text-yellow-600">
-          <label class="">MERCADOLIBRE</label>
-          <input
-            class="bg-transparent w-20 text-center"
-            type="number"
-            value={mlPrice}
-            readOnly
-          />
-        </div>
         <div class="flex flex-col items-center text-sky-600">
           <label>MERCADOPAGO</label>
           <input
