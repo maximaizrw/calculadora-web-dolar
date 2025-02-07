@@ -1,4 +1,4 @@
-import { CARGO_VENTA_MP, GANANCIA } from "@/pages/api/constants";
+import { CARGO_VENTA_MP, GANANCIA } from "@/utils/constants";
 
 export function calculateMpPrice(precioJuego, dolar) {
   if (precioJuego === 0) {
@@ -6,7 +6,7 @@ export function calculateMpPrice(precioJuego, dolar) {
   }
 
   let precioJuegoPesos = precioJuego * dolar;
-  let ganancia = precioJuego < 30 ? precioJuegoPesos * GANANCIA : precioJuegoPesos * GANANCIA;
+  let ganancia = precioJuego < 30 ? precioJuegoPesos * GANANCIA : precioJuegoPesos * 0.09;
   
   let precioVenta = precioJuegoPesos + ganancia;
   precioVenta += precioVenta * CARGO_VENTA_MP;

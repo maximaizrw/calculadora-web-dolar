@@ -13,9 +13,14 @@ export const GANANCIA = 0.10;
 
 
 export async function getDollarPrice() {
-  return fetch("https://dolarapi.com/v1/dolares/tarjeta")
-    .then(response => response.json())
-    .then(data => data.venta);
+  try {
+    const response = await fetch("https://dolarapi.com/v1/dolares/tarjeta");
+    const data = await response.json();
+    return data.venta;
+  } catch (error) {
+    console.error(error);
+    return 0;
+  }
 }
 
 export async function getDollarCriptoPrice() {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@/components/box'; // Asegúrate de que la ruta de importación sea correcta
-import { getDollarPrice, getDollarCriptoPrice, getDollarMepPrice } from "@/pages/api/constants";
+import { getDollarPrice, getDollarCriptoPrice, getDollarMepPrice } from "@/utils/constants";
 
 function App() {
   const [dolarTarjeta, setDolarTarjeta] = useState(0);

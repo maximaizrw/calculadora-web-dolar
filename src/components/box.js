@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   calculateMpPrice} from "@/utils/calculateMpPrice";
 import { calculateTransferPrice } from "@/utils/calculateTransferPrice";
+import { copyToClipboard } from "@/utils/copyToClipboard";
 
 function Box({ dolar }) {
   const [precioJuego, setprecioJuego] = useState("");
@@ -52,8 +53,3 @@ function Box({ dolar }) {
 }
 
 export default Box;
-
-function copyToClipboard(transferPrice, mpPrice) {
-  const str = `MercadoPago: $${mpPrice} / Transferencia: $${transferPrice}`;
-  navigator.clipboard.writeText(str);
-}

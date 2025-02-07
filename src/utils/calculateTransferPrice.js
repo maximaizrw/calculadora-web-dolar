@@ -1,4 +1,4 @@
-import { GANANCIA } from "@/pages/api/constants";
+import { GANANCIA } from "@/utils/constants";
 
 export function calculateTransferPrice(precioJuego, dolar) {
   const precioJuegoPesos = precioJuego * dolar;
