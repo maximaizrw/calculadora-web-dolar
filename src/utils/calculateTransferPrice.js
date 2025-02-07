@@ -1,11 +1,12 @@
+import { GANANCIA } from "@/pages/api/constants";
+
 export function calculateTransferPrice(precioJuego, dolar) {
-  
-  var precioJuegoPesos = precioJuego * dolar;
-  //Mi ganancia es el 8% del precio del juego
-  var ganancia = (precioJuegoPesos * 0.08);
+  const precioJuegoPesos = precioJuego * dolar;
+  const ganancia = precioJuegoPesos * GANANCIA;
   console.log("ganancia: " + ganancia);
 
-  var precioVenta = Math.round(precioJuegoPesos + ganancia);
+  // Calcula el precio base sumando y luego redondea al múltiplo de 5 más cercano
+  const precioVenta = Math.round((precioJuegoPesos + ganancia) / 5) * 5;
   
   return precioVenta;
 }

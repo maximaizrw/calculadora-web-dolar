@@ -54,6 +54,6 @@ function Box({ dolar }) {
 export default Box;
 
 function copyToClipboard(transferPrice, mpPrice) {
-  const str = `Transferencia: ${transferPrice}, MercadoPago: ${mpPrice}`;
+  const str = `MercadoPago: $${mpPrice} / Transferencia: $${transferPrice}`;
   navigator.clipboard.writeText(str);
 }
